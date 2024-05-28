@@ -4,6 +4,8 @@ from Module1.Module1 import PacketSnifferGUI
 from Module2.Module2 import PacketSender
 from Module3.Module3 import NetworkScanner
 from Module4.Module4 import VulnerabilityScannerGUI
+from Module5.Module5 import RoutingTableGUI
+from Module6.Module6 import NetworkMonitorApp
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -20,11 +22,15 @@ class MainWindow(QMainWindow):
         self.packet_sender_tab = PacketSender()
         self.network_scanner_tab =NetworkScanner()
         self.vulnerability_scanner_tab = VulnerabilityScannerGUI()
+        self.RoutingTableGUI=RoutingTableGUI()
+        self.NetworkMonitorApp = NetworkMonitorApp()
 
         self.tab_widget.addTab(self.packet_sniffer_tab, "Packet Sniffer")
         self.tab_widget.addTab(self.packet_sender_tab, "Packet Sender")
         self.tab_widget.addTab(self.network_scanner_tab, "Network Scanner")
         self.tab_widget.addTab(self.vulnerability_scanner_tab, "Vulnerability Scanner")
+        self.tab_widget.addTab(self.RoutingTableGUI, "Routing Table")
+        self.tab_widget.addTab(self.NetworkMonitorApp, "Network Monitor")
 
         self.layout.addWidget(self.tab_widget)
 

@@ -1,5 +1,5 @@
 import sys
-from scapy.all import ARP, Ether, srp
+from scapy.all import ARP, Ether, srp, conf, get_if_addr, getmacbyip
 from PyQt5.QtWidgets import QApplication, QMainWindow, QVBoxLayout, QTableWidget, QTableWidgetItem, QPushButton, QWidget
 
 
@@ -16,7 +16,7 @@ class NetworkScanner(QMainWindow):
         self.scan_button.clicked.connect(self.scan_network)
 
         self.device_table = QTableWidget(self.central_widget)
-        self.device_table.setColumnCount(2)  # Columns for IP Address and MAC Address
+        self.device_table.setColumnCount(4) 
         self.device_table.setHorizontalHeaderLabels(["IP Address", "MAC Address"])
 
         self.layout.addWidget(self.scan_button)
@@ -30,25 +30,24 @@ class NetworkScanner(QMainWindow):
 
     def run_arp_scan(self):
         try:
-            # Get the current machine's IP address and subnet mask
-            my_ip, _, _ = srp(Ether(dst="ff:ff:ff:ff:ff:ff") / ARP(op=1), timeout=2, verbose=0)[0][0]
+           
+            src_ip = get_if_addr(conf.iface)
+            ip_parts = src_ip.split('.')
+            target_ip_range = f"{ip_parts[0]}.{ip_parts[1]}.{ip_parts[2]}.0/24"
 
-            # Create an ARP request packet for the local network
-            target_ip_range = my_ip.split('.')[:-1]  # Get the subnet
-            target_ip_range.append("0/24")  # Set the last octet to 0/24 for the local network
-            target_ip_range = '.'.join(target_ip_range)
-
-            # Create an ARP request packet
+            
             arp_request = Ether(dst="ff:ff:ff:ff:ff:ff") / ARP(pdst=target_ip_range)
 
-            # Send and receive ARP requests
+           
             result, _ = srp(arp_request, timeout=2, verbose=0)
 
-            # Extract relevant details
+            
             devices = []
             for sent, received in result:
-                ip_address = received[ARP].psrc
-                mac_address = received[ARP].hwsrc
+                ip_address = received.psrc
+                mac_address = received.hwsrc
+
+
                 devices.append([ip_address, mac_address])
 
             return devices
@@ -58,10 +57,10 @@ class NetworkScanner(QMainWindow):
             return None
 
     def display_results(self, devices):
-        # Clear existing data in the table
+        
         self.device_table.setRowCount(0)
 
-        # Display devices in the table
+        
         for device in devices:
             row_position = self.device_table.rowCount()
             self.device_table.insertRow(row_position)
