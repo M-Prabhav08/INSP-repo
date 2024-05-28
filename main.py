@@ -2,7 +2,7 @@ import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow, QVBoxLayout, QWidget, QTabWidget
 from Module1.Module1 import PacketSnifferGUI
 from Module2.Module2 import PacketSender
-from Module3.Module3 import NetworkScannerGUI
+from Module3.Module3 import NetworkScanner
 from Module4.Module4 import VulnerabilityScannerGUI
 
 class MainWindow(QMainWindow):
@@ -18,7 +18,7 @@ class MainWindow(QMainWindow):
 
         self.packet_sniffer_tab = PacketSnifferGUI()
         self.packet_sender_tab = PacketSender()
-        self.network_scanner_tab = NetworkScannerGUI()
+        self.network_scanner_tab =NetworkScanner()
         self.vulnerability_scanner_tab = VulnerabilityScannerGUI()
 
         self.tab_widget.addTab(self.packet_sniffer_tab, "Packet Sniffer")

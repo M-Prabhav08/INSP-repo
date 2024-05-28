@@ -28,8 +28,8 @@ class LoginWindow(QMainWindow):
 
     def add_logo(self):
         logo_label = QLabel(self)
-        pixmap = QPixmap("./logo.png")  # Replace with the actual path to your logo
-        pixmap = pixmap.scaledToWidth(300)  # Resize the logo width as needed
+        pixmap = QPixmap("./logo.png")  
+        pixmap = pixmap.scaledToWidth(300) 
         logo_label.setPixmap(pixmap)
         logo_label.setAlignment(Qt.AlignCenter)
         self.layout.addWidget(logo_label)
@@ -54,12 +54,10 @@ class LoginWindow(QMainWindow):
         self.layout.addLayout(login_layout)
 
     def check_login(self):
-    # Replace the following condition with your actual login logic
      if self.username_input.text() == "kiit" and self.password_input.text() == "kiit":
-        # If login is successful, run main.py using subprocess in a new process
         import subprocess
         subprocess.Popen(["python", "main.py"])
-        self.close()  # Close the LoginWindow after main.py is executed
+        self.close() 
      else:
         print("Invalid login credentials")
 

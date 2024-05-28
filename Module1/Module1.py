@@ -16,7 +16,7 @@ class PacketSnifferGUI(QMainWindow):
         self.layout = QVBoxLayout()
 
         # Capture Button
-        self.capture_button = QPushButton("Start Capture", self)
+        self.capture_button = QPushButton("Start Capture", self)  
         self.capture_button.clicked.connect(self.start_capture)
         self.layout.addWidget(self.capture_button)
 
@@ -39,7 +39,7 @@ class PacketSnifferGUI(QMainWindow):
         self.packet_table.setRowCount(0)
 
         # Sniff packets
-        packets = sniff(count=20)  # Capture 10 packets for demonstration
+        packets = sniff(count=20)  # Capture 10 packets
 
         # Update the table
         for packet in packets:
