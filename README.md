@@ -33,6 +33,12 @@ The Integrated Network Security Platform is a comprehensive tool designed to pro
 
 ## Screenshots
 
+
+
+
+![Login_Window png](https://github.com/Somie12/INSP-repo/assets/121974498/0252f6c7-8cd5-4e49-b3f7-1d243a99848e)
+
+
 ## Authors
 - **Name:** Prabhva Mishra
   - **Email:** prabhvamarch8@gmail.com
