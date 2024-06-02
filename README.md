@@ -34,12 +34,41 @@ The Integrated Network Security Platform is a comprehensive tool designed to pro
 ## Screenshots
 
 
-
+**Login Window**
 
 ![Login_Window png](https://github.com/Somie12/INSP-repo/assets/121974498/0252f6c7-8cd5-4e49-b3f7-1d243a99848e)
 
+**Module 1**
+
+
+
+![MODULE 1](https://github.com/Somie12/INSP-repo/assets/121974498/a97ee95d-8fd4-472c-9b6d-33f5b6d8cb07)
+
+**Module 2**
+
+
+
+![MODULE 2](https://github.com/Somie12/INSP-repo/assets/121974498/3f2e7e60-b92a-4783-8254-8dab04208757)
+
+**Module 3**
+
+
+![MODULE 3](https://github.com/Somie12/INSP-repo/assets/121974498/08c4ee94-018e-4d0a-bbc0-95f67f3c3973)
+
+**Module 4**
+
+![MODULE 4](https://github.com/Somie12/INSP-repo/assets/121974498/52e2cf86-37d8-4019-ac55-029d62ee6051)
+
+**Module 5**
+
+![MODULE 5](https://github.com/Somie12/INSP-repo/assets/121974498/335199bc-1e16-4f62-8b6c-f5e89070239a)
+
+**Module 6**
+![MODULE 6](https://github.com/Somie12/INSP-repo/assets/121974498/5f6d9b08-8f61-408f-8e3f-9914d72b3201)
+
 
 ## Authors
+
 - **Name:** Prabhva Mishra
   - **Email:** prabhvamarch8@gmail.com
 - **Name:** Surbhi Tiwary
