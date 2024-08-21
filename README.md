@@ -31,9 +31,13 @@ The Integrated Network Security Platform is a comprehensive tool designed to pro
 - **Description:** Monitor network traffic in real-time and gain insights into bandwidth usage and protocol distribution.
 - **Functionality:** Visualize network traffic data, including bandwidth usage and protocol distribution, through interactive graphs for proactive network management and security analysis.
 
-## Authors
+## Team Members
 
-- **Name:** Prabhva Mishra
-  - **Email:** prabhvamarch8@gmail.com
-- **Name:** Surbhi Tiwary
-  - **Email:** surbhitiwary336@gmail.com
+<div style="display: flex; gap: 10px;">
+  <a href="https://github.com/M-Prabhav08" target="_blank">
+    <img src="https://github.com/M-Prabhav08.png" alt="Prabhva Mishra" width="100" height="100" style="border-radius: 8px;">
+  </a>
+  <a href="https://github.com/Somie12" target="_blank">
+    <img src="https://github.com/Somie12.png" alt="Surbhi Tiwary" width="100" height="100" style="border-radius: 8px;">
+  </a>
+</div>
